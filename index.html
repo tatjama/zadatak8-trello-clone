@@ -5,6 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Trello Clone</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles/style.css"/>
 </head>
 <body>
     <div class="container">
@@ -14,70 +18,106 @@
         <div class="board__wrapper">
             <!--Start Backlog section-->
             <section class="backlog">
-                <header>
-                    <h2>Backlog</h2>
+                <header class="backlog__header">
+                    <h3>Backlog</h3>
                 </header>
                 <main class="items">
                     <div class="item">
-                        <h3>Release the Course</h3>
+                        <p>Release the Course</p>
                     </div>
                     <div class="item">
-                        <h3>Sit back and relax</h3>
+                        <p>Sit back and relax</p>
                     </div>
                 </main>
-                <button>+ Add item</button>
+                <form action="" preventDefault="true" autocomplete="off">
+                    <input type="" autocomplete="false" hidden>
+                    <label for="task">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <input type="text" name="task" placeholder="+ Add item">                    
+                    </label>
+                    <input type="submit" value="save">
+                </form>
             </section>
             <!--End Backlog Section-->
             <!--Start In Progress section-->
-            <section class="backlog">
-                <header>
-                    <h2>Backlog</h2>
+            <section class="in-progress">
+                <header class="in-progress__header">
+                    <h3 >In Progress</h3>
                 </header>
                 <main class="items">
                     <div class="item">
-                        <h3>Release the Course</h3>
+                        <p>Work on Projects</p>
                     </div>
                     <div class="item">
-                        <h3>Sit back and relax</h3>
+                        <p>Listen to Music</p>
                     </div>
                 </main>
-                <button>+ Add item</button>
+                <form action="" autocomplete="off" preventDefault="true">
+                    <label for="task">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <input type="text" name="task" placeholder="+ Add item">                    
+                    </label>
+                    <input type="submit" value="save">
+                </form>
             </section>
             <!--End In Progress section-->
             <!--Start Complete Section-->
-            <section class="backlog">
-                <header>
-                    <h2>Backlog</h2>
+            <section class="complete">
+                <header class="complete__header">
+                    <h3>Complete</h3>
                 </header>
                 <main class="items">
                     <div class="item">
-                        <h3>Release the Course</h3>
+                        <p>Being cool</p>
                     </div>
                     <div class="item">
-                        <h3>Sit back and relax</h3>
+                        <p>getting stuff done</p>
                     </div>
                 </main>
-                <button>+ Add item</button>
+                <form action="" autocomplete="off" preventDefault="true">
+                    <label for="task">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <input type="text" name="task" placeholder="+ Add item">                    
+                    </label>
+                    <input type="submit" value="save">
+                </form>
             </section>
             <!--End Complete section-->
-            <!--Start On Holder section-->
-            <section class="backlog">
-                <header>
-                    <h2>Backlog</h2>
+            <!--Start On Hold section-->
+            <section class="on-hold">
+                <header class="on-hold__header">
+                    <h3>On Hold</h3>
                 </header>
                 <main class="items">
                     <div class="item">
-                        <h3>Release the Course</h3>
-                    </div>
-                    <div class="item">
-                        <h3>Sit back and relax</h3>
+                        <p>Being uncool</p>
                     </div>
                 </main>
-                <button>+ Add item</button>
+                <form action="" preventDefault="true" autocomplete="off">
+                    <label for="task">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <input type="text" name="task" placeholder="+ Add item">                    
+                    </label>
+                    <input type="submit" value="save">
+                </form>
             </section>
-            <!--End On Holden section-->
+            <!--End On Hold section-->
         </div>
-
+        <footer>
+            
+        </footer>
     </div>
     
 </body>
