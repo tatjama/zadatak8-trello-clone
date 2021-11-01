@@ -349,5 +349,33 @@ button:hover{
     font-weight: bold;
     color: #FAFB0A;
 }*/
-
+@media screen and (max-width: 1280px){
+    section{
+        width: 23%;
+    }
+}
+@media screen and (max-width: 1024px){
+    .board__wrapper{
+        flex-wrap: wrap;
+    }
+    section{
+        width: 40%;
+        margin-bottom: 50px;
+    }
+}
+@media screen and (max-width: 768px) {
+    section{
+        width: 45%;
+    }
+    
+}
+@media screen and (max-width: 650px) {
+    h1{
+        text-align: center;
+    }
+    section{
+        width: 327px;
+    }
+    
+}
     
