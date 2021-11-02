@@ -13,7 +13,7 @@
 <body>
     <div class="container">
         <header>
-            <h1>Kanban Board</h1>
+            <h1>PackMan Board </h1>
         </header>
         <div class="board__wrapper">
             <!--Start Backlog section-->
@@ -22,12 +22,12 @@
                     <h3>Backlog</h3>
                 </header>
                 <main class="items">
-                    <div class="item">
-                        <p>Release the Course</p>
-                    </div>
-                    <div class="item">
-                        <p>Sit back and relax</p>
-                    </div>
+                    <p  draggable="true" class="item">
+                        Release the Course
+                    </p>
+                    <p class="item">
+                        Sit back and relax
+                    </p>
                 </main>
                 <form action="" preventDefault="true" autocomplete="off">
                     <input type="" autocomplete="false" hidden>
@@ -48,12 +48,12 @@
                     <h3 >In Progress</h3>
                 </header>
                 <main class="items">
-                    <div class="item">
-                        <p>Work on Projects</p>
-                    </div>
-                    <div class="item">
-                        <p>Listen to Music</p>
-                    </div>
+                    <p class="item">
+                        Work on Projects
+                    </p>
+                    <p class="item">
+                        Listen to Music
+                    </p>
                 </main>
                 <form action="" autocomplete="off" preventDefault="true">
                     <label for="task">
@@ -73,12 +73,12 @@
                     <h3>Complete</h3>
                 </header>
                 <main class="items">
-                    <div class="item">
-                        <p>Being cool</p>
-                    </div>
-                    <div class="item">
-                        <p>getting stuff done</p>
-                    </div>
+                    <p class="item">
+                        Being cool
+                    </p>
+                    <p class="item">
+                        getting stuff done
+                    </p>
                 </main>
                 <form action="" autocomplete="off" preventDefault="true">
                     <label for="task">
@@ -98,9 +98,9 @@
                     <h3>On Hold</h3>
                 </header>
                 <main class="items">
-                    <div class="item">
-                        <p>Being uncool</p>
-                    </div>
+                    <p class="item">
+                        Being uncool
+                    </p>
                 </main>
                 <form action="" preventDefault="true" autocomplete="off">
                     <label for="task">
@@ -116,9 +116,9 @@
             <!--End On Hold section-->
         </div>
         <footer>
-            
+
         </footer>
     </div>
-    
+    <script src="./js/script.js"></script>
 </body>
 </html>
