@@ -6,9 +6,7 @@ class Task{
     this.draggable = true; 
     this.column = column;
     }
-
 }
-
 class Board{
     constructor(name, className, tasks,id ){
         this.name = name;
@@ -18,7 +16,6 @@ class Board{
     }
 
     static displayBoard(board){
-      //  console.log(board)
         document.querySelector(".board__wrapper").innerHTML = 
          board.map(el => {
             return `
@@ -28,7 +25,6 @@ class Board{
                 </header>
                 <main class="items" id = "${el.id}">
                 ${  el.tasks.map(task => {
-                   // console.log(task)
                     return `<p  class="item" draggable = "${task.draggable}" id = "${task.id}">
                         ${task.name}
                     </p>
@@ -52,7 +48,6 @@ class Board{
     }
 }
 
-
 /**Initial Values */
 
 let initialTasks = [["release the course", 0], ["sit back and relax", 0], ["work on projects", 1],
@@ -75,26 +70,20 @@ let myBoard =  function (){
     board = JSON.parse( localStorage.getItem('board'));
     localStorage.setItem("tasks", JSON.stringify(tasks));
     tasks = JSON.parse(localStorage.getItem('tasks'));
-    console.log(board)
 
  //Add Event Listeners   
-const draggableItems = document.querySelectorAll(".item");
-draggableItems.forEach((item, index) => {
-    item.addEventListener("dragstart",handleDragStart);
-    /*item.setAttribute("draggable", true);
-    item.setAttribute("id", "drag-"+index);*/
-})
-const droppableContainers = document.querySelectorAll(".items");
-droppableContainers.forEach((container, index) => {
-    container.addEventListener("drop", handleDrop);
-    container.addEventListener("dragover", handleDragOver );
-    //container.setAttribute("id", "drop-"+index);
-})
-const submitButtons = document.querySelectorAll("input[type=submit]");
-submitButtons.forEach(button =>{
-    button.addEventListener("click",handleSubmit);
-})
-
-
+    const draggableItems = document.querySelectorAll(".item");
+    draggableItems.forEach((item) => {
+        item.addEventListener("dragstart",handleDragStart);
+    })
+    const droppableContainers = document.querySelectorAll(".items");
+    droppableContainers.forEach((container) => {
+        container.addEventListener("drop", handleDrop);
+        container.addEventListener("dragover", handleDragOver );
+    })
+    const submitButtons = document.querySelectorAll("input[type=submit]");
+    submitButtons.forEach(button =>{
+        button.addEventListener("click",handleSubmit);
+    })
 }
 
