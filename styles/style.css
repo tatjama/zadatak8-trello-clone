@@ -50,7 +50,6 @@ section{
     width: 20%;
     padding: 20px;
     background-color: rgba(255,255,255,0.1);
-    background-color: gray;
     border-radius: 10px;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
@@ -79,29 +78,29 @@ header{
     --primary-color:#EF0609;
 }
 
-.backlog__header{
+.backlog header{
     background-color: #fa7b7d;
 }
 
-.in-progress__header{
+.in-progress header{
     background-color: #066868;
 }
 
-.complete__header{
+.complete header{
     background-color: #d68604;
 }
 
-.on-hold__header{
+.on-hold header{
     background-color: #c90407;
 }
 .items{
     padding: 20px 0px;
     padding-bottom: 50px;
-    background-color: white;
 }
 .item{
     padding: 10px;
     margin: 10px 0px;
+    text-transform: capitalize;
     background-color:rgba(253, 151, 152, 0.8);
     background-color: rgba(0, 0, 0, 0.7);
     border-radius: 10px;
@@ -112,6 +111,7 @@ header{
 }
 .item:hover{
     background-color: yellow;
+    color:rgba(0, 0, 0, 0.7);
 }
 
 label{

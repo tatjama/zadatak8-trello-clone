@@ -10,115 +10,20 @@
     <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./styles/style.css"/>
 </head>
-<body>
+<body onload="myBoard()">
     <div class="container">
         <header>
             <h1>PackMan Board </h1>
         </header>
         <div class="board__wrapper">
-            <!--Start Backlog section-->
-            <section class="backlog">
-                <header class="backlog__header">
-                    <h3>Backlog</h3>
-                </header>
-                <main class="items">
-                    <p  draggable="true" class="item">
-                        Release the Course
-                    </p>
-                    <p class="item">
-                        Sit back and relax
-                    </p>
-                </main>
-                <form action="" preventDefault="true" autocomplete="off">
-                    <input type="" autocomplete="false" hidden>
-                    <label for="task">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <input type="text" name="task" placeholder="+ Add item">                    
-                    </label>
-                    <input type="submit" value="save">
-                </form>
-            </section>
-            <!--End Backlog Section-->
-            <!--Start In Progress section-->
-            <section class="in-progress">
-                <header class="in-progress__header">
-                    <h3 >In Progress</h3>
-                </header>
-                <main class="items">
-                    <p class="item">
-                        Work on Projects
-                    </p>
-                    <p class="item">
-                        Listen to Music
-                    </p>
-                </main>
-                <form action="" autocomplete="off" preventDefault="true">
-                    <label for="task">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <input type="text" name="task" placeholder="+ Add item">                    
-                    </label>
-                    <input type="submit" value="save">
-                </form>
-            </section>
-            <!--End In Progress section-->
-            <!--Start Complete Section-->
-            <section class="complete">
-                <header class="complete__header">
-                    <h3>Complete</h3>
-                </header>
-                <main class="items">
-                    <p class="item">
-                        Being cool
-                    </p>
-                    <p class="item">
-                        getting stuff done
-                    </p>
-                </main>
-                <form action="" autocomplete="off" preventDefault="true">
-                    <label for="task">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <input type="text" name="task" placeholder="+ Add item">                    
-                    </label>
-                    <input type="submit" value="save">
-                </form>
-            </section>
-            <!--End Complete section-->
-            <!--Start On Hold section-->
-            <section class="on-hold">
-                <header class="on-hold__header">
-                    <h3>On Hold</h3>
-                </header>
-                <main class="items">
-                    <p class="item">
-                        Being uncool
-                    </p>
-                </main>
-                <form action="" preventDefault="true" autocomplete="off">
-                    <label for="task">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <input type="text" name="task" placeholder="+ Add item">                    
-                    </label>
-                    <input type="submit" value="save">
-                </form>
-            </section>
-            <!--End On Hold section-->
+            <!--This dynamically generated board-->
         </div>
         <footer>
 
         </footer>
     </div>
+    <script src="./js/data.js"></script>
     <script src="./js/script.js"></script>
+    
 </body>
 </html>
