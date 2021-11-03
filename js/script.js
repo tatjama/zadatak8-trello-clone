@@ -25,56 +25,39 @@
 function handleDragOver(ev) {
     ev.preventDefault();  
 }
-
-let draggedEl;
-
 function handleDragStart(ev) {
     ev.dataTransfer.setData("text/plain", ev.target.id);
-    draggedEl =  (ev.path[1])
-    /*for(let i = 0; i < ev.path[1].children.length; i++){
-        console.log(ev.path[1].children[i])
-    }*/
-
 }
 
 function handleDrop(ev) {
     ev.preventDefault();  
+    let tasks = JSON.parse(localStorage.getItem('tasks'));
+    let board = JSON.parse(localStorage.getItem('board'));        
     let sourceIdEl=document.getElementById(ev.dataTransfer.getData("text/plain"));
+    console.log(sourceIdEl.id);
+
+    for(let i = 0; i < board.length; i++){
+        if(board[i].tasks.filter(t=>t.id === sourceIdEl.id).length == 1){
+            let newBoardTasks = board[i].tasks.filter(t=>t.id !== sourceIdEl.id);
+            board[i].tasks = newBoardTasks;
+        }        
+    }
     let targetEl=document.getElementById(ev.target.id)
         let targetParentEl =  targetEl.parentElement;
             (targetEl.className === sourceIdEl.className)
             ? targetParentEl.insertBefore(sourceIdEl, targetEl):targetEl.appendChild(sourceIdEl);
-        console.log(sourceIdEl.parentElement)
-        console.log(ev)
-            //let draggedEl =  sourceIdEl.parentElement;
-               //console.log(draggedEl.children)   
-        console.log(draggedEl.id);
-        let draggedElTasks = [];
-        for(let i = 0; i < draggedEl.children.length; i++){
-            draggedElTasks.push(draggedEl.children[i]);
-        }             
-        //console.log(draggedElTasks)
+            console.log(sourceIdEl);
         let droppedEl = (ev.target.className === "item")? ev.target.parentElement: ev.target;
         let tasksOrder = [];
-        //Get tasks and Boar from LS
-        let tasks = JSON.parse(localStorage.getItem('tasks'));
-        let board = JSON.parse(localStorage.getItem('board'));
         for(let i = 0; i < droppedEl.children.length; i++){
             let droppedTask = tasks.filter(t=> t.id === droppedEl.children[i].id)[0];
             droppedTask.column = droppedEl.id;            
             tasks[tasks.indexOf(droppedTask.id)] = droppedTask;
-            //tasksOrder.push(tasks.filter(t => t.id == droppedEl.children[i].id)[0])
             tasksOrder.push(droppedTask);            
         }
-
-        console.log(draggedElTasks)
-        console.log(tasksOrder);
-        console.log(tasks);
         localStorage.setItem("tasks", JSON.stringify(tasks));
-        board[draggedEl.id].tasks = draggedElTasks;
         board[droppedEl.id].tasks = tasksOrder;
         localStorage.setItem("board", JSON.stringify(board));
-        //Tasks and Board set to LS
         console.log(board)
 }
 
@@ -101,7 +84,8 @@ function handleSubmit(e) {
             console.log(board[i].tasks);
             console.log(tasks.filter(t => t.column == i));
             if(i == boardIndex){
-                board[i].tasks = tasks.filter(t => t.column == i);
+              //  board[i].tasks = tasks.filter(t => t.column == i);
+              board[i].tasks.push(task)
 
             }
         }
