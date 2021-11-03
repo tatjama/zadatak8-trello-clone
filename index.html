@@ -9,6 +9,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./styles/style.css"/>
+    
+    <script src="./js/script.js"></script>
+    <script src="./js/data.js"></script>
 </head>
 <body onload="myBoard()">
     <div class="container">
@@ -16,14 +19,93 @@
             <h1>PackMan Board </h1>
         </header>
         <div class="board__wrapper">
-            <!--This dynamically generated board-->
+            <!--Start Backlog section-->
+            <section class="backlog">
+                <header class="backlog__header">
+                    <h3>Backlog</h3>
+                </header>
+                <main class="items" id = "0">
+                    
+                </main>
+                <form action="#" preventDefault="true" autocomplete="off">
+                    <input type="" autocomplete="false" hidden>
+                    <label for="task">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <input type="text" autocomplete="off" ondrop="return false;" name="task" placeholder="+ Add item">                    
+                    </label>
+                    <input type="submit" id = "btn-0" value="save">
+                </form>
+            </section>
+            <!--End Backlog Section-->
+            <!--Start In Progress section-->
+            <section class="in-progress">
+                <header class="in-progress__header">
+                    <h3 >In Progress</h3>
+                </header>
+                <main class="items" is = "1">
+                 </main>
+                <form action="#" autocomplete="off" preventDefault="true">
+                    <input type="" autocomplete="false" hidden>
+                    <label for="task">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <input type="text" autocomplete="off" ondrop="return false;" name="task" placeholder="+ Add item">                    
+                    </label>
+                    <input type="submit" id = "btn-1" value="save">
+                </form>
+            </section>
+            <!--End In Progress section-->
+            <!--Start Complete Section-->
+            <section class="complete">
+                <header class="complete__header">
+                    <h3>Complete</h3>
+                </header>
+                <main class="items" id = "2">
+                 
+                </main>
+                <form action="#" autocomplete="off" preventDefault="true">
+                    <input type="" autocomplete="false" hidden>
+                    <label for="task">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <input type="text" autocomplete="off" ondrop="return false;" name="task" placeholder="+ Add item">                    
+                    </label>
+                    <input type="submit" id = "btn-2" value="save">
+                </form>
+            </section>
+            <!--End Complete section-->
+            <!--Start On Hold section-->
+            <section class="on-hold">
+                <header class="on-hold__header">
+                    <h3>On Hold</h3>
+                </header>
+                <main class="items" id = "3">
+                 
+                </main>
+                <form action="#" preventDefault="true" autocomplete="off">
+                    <input type="" autocomplete="false" hidden>
+                    <label for="task">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <input type="text" autocomplete="off" ondrop="return false;" name="task" placeholder="+ Add item">                    
+                    </label>
+                    <input type="submit" id = "btn-3" value="save">
+                </form>
+            </section>
+            <!--End On Hold section-->
         </div>
         <footer>
 
         </footer>
     </div>
-    <script src="./js/data.js"></script>
-    <script src="./js/script.js"></script>
-    
 </body>
 </html>
