@@ -1,19 +1,4 @@
-# Tatjana Marković Trello Clone app
-
-## The challenge
-##Uputstvo
-
-Potrebno je napraviti Trello klon; vizuelni dizajn (boje, fontovi i sl.) je po slobodnom izboru, samo je bitno da bude responsive. Takođe, možete da koriste bilo koju UI biblioteku/framework (Bootstrap, MaterialUI, Tailwind, itd.)
-**Za samu "Drag and Drop" funkcionalnost potrebno je koristiti https://developer.mozilla.org/en-US/docs/Web/API/HTML_Drag_and_Drop_API
-
-###Zahtevi:
-- 4 kolone (npr. Backlog, In Progress, Complete, On Hold)
-- Add Item i Save Item funkcionalnost unutar svake kolone.
-- Reorder elemenata unutar kolone i između različitih kolona.
-- Prikazati izmene i kada se refresh-uje stranica.
-
-###Napomena:
-Linkove ka GitHub repozitorijumu zadatka, kao i link ka Vercel domenima (za preview i produkciju) na kome se kod nalazi, ostavite u komentaru na kartici "Zadatak 8 - Rešenja".
+# Tatjana Marković PackBan Trello Clone app
 ## Table of contents
 
   - [Overview](#overview)
@@ -25,76 +10,57 @@ Linkove ka GitHub repozitorijumu zadatka, kao i link ka Vercel domenima (za prev
   - [Author](#author)
 
 ## Overview
-![Overview](./images/screenshots/player.jpg)
+![Overview](./images/screenshots/over.jpg)
 
-- On first load and on Ended
-  1. On screen displayed Play button is shown for 1 second.
-  2. Active buttons: Play, sound On, wide screen, speed x 1 (normal)
+- On first load 
+  1. On screen Board with 4 columns without tasks.
 
-- App controls
-  1. Play - Pressing Play button or Pressing Screen.
-  2. Stop - Pressing Stop button or Pressing Screen.
-  3. Sound - Toggle Sound button   between muted and full sound,
-           - Hover Sound button -> show Sound slider to change volume
-  4. Speed - Toggle Speed button between show and hide speed list,
-           - Chosen Speed -> show on Speed button,
-  5. Screen - Toggle Screen button between full screen and normal,
-            - Full screen -> Show message
-            - Esc key -> close full screen,
-  6. Duration - Progress bar show progress of the video, duration and elapsed time ,
-              - User can "jump" on the desire moment of the video by moving slider left or right,
-
-
+Features:
+- Add Item and Save Item functionality within each column.
+- Reorder elements within a column and between different columns.
+- Show changes when refreshing the page.
 ## The challenge
 
-You need to make a Custom Video Player; visual design (colors, fonts, etc.) is free to choose, it is only important to be responsive.
+It is necessary to make a Trello clone; visual design (colors, fonts, etc.) is free to choose, it is only important to be responsive. Also, you can use any UI library / framework (Bootstrap, MaterialUI, Tailwind, etc.)
+** For the "Drag and Drop" functionality itself it is necessary to use 
+![](https://developer.mozilla.org/en-US/docs/Web/API/HTML_Drag_and_Drop_API)
 
-The videos you can use are in the following archive: 
-![Videos](https://drive.google.com/file/d/19tmFoS7OOt5eb7n5s1T_mSe6v49etyM2/view?usp=sharing)
-
-Use only Browser Video & Audio API and make custom controls:
-- Yes the video can be played / paused
-- To be able to increase the volume
-- That sound can be mutated
-- That the video playback speed can be changed (default is 1.0x, and there should be 0.5x, 0.75x, 1.5x, 2.0x)
-- To have FullScreen mode
-- Create a progress bar for the time (duration of the video) that can be clicked and that takes the user to the exact second of the video.
-
-The Video Player should look and work like this: 
-![Example](https://drive.google.com/file/d/1zGt-IHlrBeRHJpBuOuGE2AIAjU1OJTta/view?usp=sharing)
-
+Requirements:
+- 4 columns (eg Backlog, In Progress, Complete, On Hold)
+- Add Item and Save Item functionality within each column.
+- Reorder elements within a column and between different columns.
+- Show changes when refreshing the page.
 ### Screenshot
 
-![Desktop-init ](./images/screenshots/dt-start.png)
+![Desktop-init ](./images/screenshots/dt.png)
+![Desktop-Add-Task ](./images/screenshots/dt-add.png)
 ![Desktop-Active ](./images/screenshots/dt-active.png)
-![Desktop-Active ](./images/screenshots/dt-active1.png)
-![Desktop-max ](./images/screenshots/dt-fullscreen.png)
-![Tablet-768 ](./images/screenshots/tablet-fullscreen.png)
-![Tablet-landscape ](./images/screenshots/tablet-landscape.png)
+![Desktop-Dragg&Drop ](./images/screenshots/dt-drop.png)
+![Tablet-768 ](./images/screenshots/tablet.png)
+![Tablet-landscape ](./images/screenshots/tablet-ls.png)
 ![Mobile-375 ](./images/screenshots/mobile.png)
-![Mobile-fullscreen ](./images/screenshots/mobile-fullscreen.png)
-![Mobile-landscape ](./images/screenshots/mobile-landscape.png)
-![Mobile-landscape-fullscreen ](./images/screenshots/mobile-landscape-fullscreen.png)
+![Mobile-ls ](./images/screenshots/mobile-ls.png)
+![Mobile-add-task ](./images/screenshots/mobile-add.png)
+![Mobile-Drop ](./images/screenshots/mobile-drop.png)
 
 ### Links
 
-- Solution URL: [GitHub](https://github.com/tatjama/bonus-zadatak7-pomodoro-app/tree/develop)
-- Preview: [Vercel](https://bonus-zadatak7-pomodoro-app-57zkdu247-tatjana.vercel.app/)
-- Live Site URL: [Vercel](https://bonus-zadatak7-pomodoro-app.vercel.app/)
+- Solution URL: [GitHub](https://github.com/tatjama/zadatak8-trello-clone/tree/develop)
+- Preview: [Vercel](https://zadatak8-trello-clone-d7tlbkc3c-tatjana.vercel.app/)
+- Live Site URL: [Vercel](https://zadatak8-trello-clone.vercel.app/)
 
 ## My process
 
 1. Create a new project
 2. Initializing git repositories main and develop
 3. Import git repositories to the Vercel project
-
 4. Create HTML structure
 5. Create CSS Utility
 6. Style for Desktop
 7. Responsive Mobile
-8. Create JavaScript 
-9. Manual Test for bugs
-10. Compare original designs with my work
+8. Create JavaScript  drag&drop
+9. Create JavaScript add new task
+10. Manual Test for bugs
 11. Create screenshots
 12. Change README-template.md to README.md
 13. Open Pull request
@@ -115,7 +81,8 @@ The Video Player should look and work like this:
 3. JavaScript
 - DOM manipulation   
 - Event handling
-- Browse Audio && Video API
+- OOP javaScript
+- Local Storage
 ## Author
 
 - Website - [Tatjana Markovic](https://my-react-portfolio-tatjana.vercel.app/)
