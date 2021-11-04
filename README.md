@@ -10,7 +10,7 @@
   - [Author](#author)
 
 ## Overview
-![Overview](./images/screenshots/player.jpg)
+![Overview](./images/screenshots/over.jpg)
 
 - On first load 
   1. On screen Board with 4 columns without tasks.
