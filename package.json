@@ -1,0 +1,28 @@
+{
+  "name": "zadatak8-trello-clone",
+  "version": "1.0.0",
+  "description": "webpack version",
+  "main": "webpack.config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack-dev-server",
+    "build": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tatjama/zadatak8-trello-clone.git"
+  },
+  "author": "Tatjana Markovic",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tatjama/zadatak8-trello-clone/issues"
+  },
+  "homepage": "https://github.com/tatjama/zadatak8-trello-clone#readme",
+  "devDependencies": {
+    "html-webpack-plugin": "^5.5.0",
+    "lite-server": "^2.6.1",
+    "webpack": "^5.53.0",
+    "webpack-cli": "^4.9.2",
+    "webpack-dev-server": "^4.7.4"
+  }
+}
