@@ -1,4 +1,4 @@
-import Board from './Board';
+import Board from './components/Board';
 import EventHandler from './EventHandler';
 
 /**OnLoad Function */
