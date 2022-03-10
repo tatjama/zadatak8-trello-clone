@@ -97,22 +97,7 @@ header{
     padding: 20px 0px;
     padding-bottom: 50px;
 }
-.item{
-    padding: 10px;
-    margin: 10px 0px;
-    text-transform: capitalize;
-    background-color:rgba(253, 151, 152, 0.8);
-    background-color: rgba(0, 0, 0, 0.7);
-    border-radius: 10px;
-    -webkit-border-radius: 10px;
-    -moz-border-radius: 10px;
-    -ms-border-radius: 10px;
-    -o-border-radius: 10px;
-}
-.item:hover{
-    background-color: yellow;
-    color:rgba(0, 0, 0, 0.7);
-}
+
 
 label{
     position: relative;
@@ -234,7 +219,7 @@ footer{
     height: 175px;
     position: absolute;
     bottom: 0;
-    background-image: url(../images/pacman2.jpg);
+    background-image: url(../../images/pacman2.jpg);
     background-repeat: no-repeat;
     background-size: 375px 175px;
     background-position: bottom right;

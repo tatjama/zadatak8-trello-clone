@@ -17,11 +17,33 @@ module.exports = {
     },
     devtool: "inline-source-map",
     module: {
-        rules: [{
-            test:/\.txt$/, 
-            use: "row-loader", 
-            exclude: /node_modules/
-        }]
+        rules: [
+            {test:/\.txt$/, use: "row-loader", exclude: /node_modules/},
+            {
+                test:/\.css$/, 
+                use:[
+                    { loader: 'style-loader' },
+                    {
+                        loader: 'css-loader',
+                        options: {
+                          modules: true
+                        },
+                        options: {
+                            importLoaders: 1,
+                            modules: true,
+                          },
+                    }
+                ],
+                include: /\.module\.css$/,
+                exclude: /node_modules/
+            },
+            {
+      test: /\.css$/,
+      use: ["style-loader", "css-loader"],
+      exclude: /\.module\.css$/,
     },
-    plugins: [new HTMLWebpackPlugin({template: "./index.html"})]
+        ]
+    },
+    plugins: [new HTMLWebpackPlugin({template: "./index.html"})]    
+    
 }

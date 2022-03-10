@@ -1,7 +1,7 @@
 import FormTemplate from './FormTemplate';
-import TaskTemplate from './TaskTemplate';
+import TaskModule from './Task.module';
 
-const BoardTemplate = (column) => {
+const BoardModule = (column) => {
     return(
         `
             <section class="${column.className}">
@@ -10,7 +10,7 @@ const BoardTemplate = (column) => {
                 </header>
                 <main class="items" id = "${column.id}">
                 ${(column.tasks.length > 0)? column.tasks.map(task => {
-                 return TaskTemplate(task)
+                 return TaskModule(task)
                 }).join(''): ""}
                 </main>
                 ${FormTemplate(column)}
@@ -19,4 +19,4 @@ const BoardTemplate = (column) => {
     )
 }
 
-export default BoardTemplate
+export default BoardModule

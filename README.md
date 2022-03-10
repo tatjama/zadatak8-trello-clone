@@ -83,6 +83,14 @@ Requirements:
 - Event handling
 - OOP javaScript
 - Local Storage
+4. Webpack
+- webpack:"^5.53.0",
+- webpack-cli: "^4.9.2",
+- webpack-dev-server: "^4.7.4",
+- html-webpack-plugin: "^5.5.0",
+- css-loader,
+- style-loader, 
+
 ## Author
 
 - Website - [Tatjana Markovic](https://my-react-portfolio-tatjana.vercel.app/)

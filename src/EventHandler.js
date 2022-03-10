@@ -12,6 +12,7 @@ class EventHandler {
     static handleDrop(e, tasks, board) {
         e.preventDefault();          
         let sourceIdEl=document.getElementById(e.dataTransfer.getData("text/plain"));
+        console.log(sourceIdEl);
         /**Remove task from container */
         for(let i = 0; i < board.length; i++){
             if(board[i].tasks.filter(t=>t.id === sourceIdEl.id).length == 1){
@@ -28,7 +29,8 @@ class EventHandler {
                 ? targetParentEl.insertBefore(sourceIdEl, targetEl):targetEl.appendChild(sourceIdEl);
         
         /*Add task to new container*/        
-        let droppedEl = (e.target.className === "item")? e.target.parentElement: e.target;
+        let droppedEl = (e.target.className === "items")? e.target: e.target.parentElement;
+        console.log(e)
         let tasksOrder = [];
         for(let i = 0; i < droppedEl.children.length; i++){
             let droppedTask = tasks.filter(t=> t.id === droppedEl.children[i].id)[0];
@@ -37,6 +39,9 @@ class EventHandler {
                 tasksOrder.push(droppedTask);            
         }
         localStorage.setItem("tasks", JSON.stringify(tasks));
+        console.log('dropped')
+        console.log(droppedEl);
+        console.log(droppedEl.id);
         board[droppedEl.id].tasks = tasksOrder;
         localStorage.setItem("board", JSON.stringify(board));
     }

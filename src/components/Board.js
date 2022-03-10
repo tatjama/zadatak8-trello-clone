@@ -1,4 +1,4 @@
-import BoardTemplate from './BoardTemplate';
+import BoardModule from './Board.module';
 
 class Board{
     constructor(name, className,id ){
@@ -15,7 +15,7 @@ class Board{
     static displayBoard(board){
         document.querySelector(".board__wrapper").innerHTML = 
          board.map(column => {
-            return BoardTemplate(column)
+            return BoardModule(column)
         }).join('') 
     }
 }

@@ -1,0 +1,16 @@
+.item{
+    padding: 10px;
+    margin: 10px 0px;
+    text-transform: capitalize;
+    background-color:rgba(253, 151, 152, 0.8);
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+.item:hover{
+    background-color: yellow;
+    color:rgba(0, 0, 0, 0.7);
+}

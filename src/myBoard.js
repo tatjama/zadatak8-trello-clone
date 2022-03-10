@@ -23,9 +23,9 @@ const myBoard =  function (){
        
     Board.displayBoard(board);
  //Add Event Listeners   
-    const draggableItems = document.querySelectorAll(".item");
+    const draggableItems = document.querySelectorAll(".items p");
     draggableItems.forEach((item) => {
-        item.addEventListener("dragstart", EventHandler.handleDragStart);
+        item.addEventListener("dragstart",EventHandler.handleDragStart);
     })
     const droppableContainers = document.querySelectorAll(".items");
     droppableContainers.forEach((container) => {
