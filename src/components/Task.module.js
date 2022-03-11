@@ -1,8 +1,8 @@
-import style from './Task.module.css';
+import './Task.module.css';
 
 const  TaskModule = (task) => {
     console.log(task)
-    return `<p  class=${style.item} draggable = "${task.draggable}" id = "${task.id}">
+    return `<p  class="item" draggable = "${task.draggable}" id = "${task.id}">
                     ${task.name}
                 </p>
                 `

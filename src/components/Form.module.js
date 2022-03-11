@@ -1,4 +1,6 @@
-const FormTemplate = (el) => {
+import './Form.module.css';
+
+const FormModule = (el) => {
 return(
     `<form action="#" preventDefault="true" autocomplete="off">
     <input type="" autocomplete="false" hidden>
@@ -14,4 +16,4 @@ return(
 )
 }
 
-export default FormTemplate
+export default FormModule

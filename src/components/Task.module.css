@@ -1,4 +1,4 @@
-.item{
+p{
     padding: 10px;
     margin: 10px 0px;
     text-transform: capitalize;
@@ -10,7 +10,7 @@
     -ms-border-radius: 10px;
     -o-border-radius: 10px;
 }
-.item:hover{
+p:hover{
     background-color: yellow;
     color:rgba(0, 0, 0, 0.7);
 }
