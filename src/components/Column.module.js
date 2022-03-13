@@ -1,8 +1,8 @@
 import FormModule from './Form.module';
 import TaskModule from './Task.module';
-import style from './Board.module.css';
+import style from './Column.module.css';
 
-const BoardModule = (column) => {
+const ColumnModule = (column) => {
     return(
         `
             <section class=${style[column.className]} >
@@ -20,4 +20,4 @@ const BoardModule = (column) => {
     )
 }
 
-export default BoardModule
+export default ColumnModule
